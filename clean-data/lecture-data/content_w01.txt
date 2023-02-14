@@ -1,0 +1,313 @@
+
+SYSTEMS PLANNING
+Introduction
+ 
+
+Class content
+What to expect from this class?
+An introduction to software engineering and its goals.
+An introduction to the  software process
+Fundamental ideas and aspects  of software engineering
+Types of software systems
+Software engineering ethics
+
+Class learning goals
+
+What should be your learning outcome?
+
+Understand that software engineering is more than programming
+Understand the software process
+Know some   general issues  software engineering needs to deal with
+Be able to distinguish between different types of software systems
+Be aware of  ethical rules  with respect to software engineering
+ 
+Professional Software Development
+
+Programming as (side) activity
+
+Business people write  spreadsheets
+Scientists write  programs to process data
+Hobbyists write programs for their  own interest 
+
+Professional programming
+Software for specific business purposes E.g. information systems, CAD systems
+Used by someone  apart from the developer
+Maintained and changedover time
+Needs  software/system engineering
+
+Programming vs. Software Engineering
+
+Software is not just the programs themselves but
+Associated  configuration files
+System documentation describing the structure of the system
+User documentation describing how to use the system
+Websites to download recent product information and updates
+“Software engineers are concerned with developing software products (i.e. software which can be sold to a customer).” 
+
+
+Two kinds of software products
+
+Generic products
+standalone systems sold on the open market E.g. word processors, drawing packages, project management tools, etc.
+Also socalled  vertical applications such as accounting systems
+
+Customized (or bespoke) products
+Commissioned by a customer
+Built by a  contractor E.g. control systems for electronic devices, systems to support particular business processes, etc.
+
+
+Two kinds of software products
+
+Generic products
+
+Developers control the software specification
+The development company estimates what clients may need Customized (or bespoke) products
+Customer develops the software specification
+The client tells the developer  what he/she needs
+
+But
+The  distinction is becoming increasingly blurred
+Now often generic products build the base and are then adapted to the requirements of the customer
+E.g. ERP systems such as SAP
+
+ 
+
+Software Quality
+
+Various aspects to take into account
+
+Software behavior while executed
+Structure and organization of the components
+Documentation. These are non functional software attributes
+E.g. response time, understandability, reliability, security
+Things that you would expect from a software (depending on its area of application)
+
+Software Engineering as a discipline
+
+Engineering discipline
+
+Engineers  make things work
+Apply  theories, methods, and tools
+Discover solutions  to problems without theories
+Work within organizational and financial constraints
+
+Different aspects of software production
+Not only code
+Project management activities
+Development of tools, methods an theories to support software production
+
+Software Engineering as a discipline
+
+Constraints
+
+Getting results  within schedule and budget
+Deal with compromises
+Adapt to the organization
+Find most appropriate method for given circumstance
+More creative, less formal approaches may be effective in  some cases; more traditional approaches may work for other settings
+
+“People writing programs for themselves, however, can spend as much time as they wish on the program development.”
+
+Importance
+
+Software Engineering is important because
+
+More and more individuals  rely on advanced software systems. Hence, we need trustworthy systems.
+It is usually  cheaper in the long  run to use software engineering methods and techniques rather than just coding away ( Note: the majority of costs are costs of changing the software )
+ 
+
+Systematic approach: A software process
+
+A software process  is a sequence of activities that leads to the production of a software product. 
+The four fundamental activities are:
+Software specification : customers and engineers define the software and its constraints
+Software design and implementation : the software is designed and programmed
+Software validation : the software is checked against requirements
+Software evolution : the software is modified
+
+Different types of processes
+
+Different types of systems need different 
+development processes. 
+
+For example:
+Realtime software in an aircraft needs to be completely specified
+For ecommerce systems specification and development may go hand in hand
+
+Consequently...
+“Activities may be organized in different ways and described at different levels of detail depending on the type of software being developed.”
+
+Software engineering disciplines
+
+Computer science
+Methods that underlie computers and software systems
+Theory
+Not always 100% applicable to large, complex systems
+
+Systems engineering
+All aspects of  development and evolution of complex systems
+Hardware development
+Process design  and system deployment
+System specification  and integration
+
+General issues with software
+
+Heterogeneity:  Operated as distributed systems accessed by different types of devices (e.g. mobile phones). Challenge:  build flexible software
+Business and social change:  business and society changes and so do technologies. Challenge:  traditional SE techniques are time consuming
+Security and trust:  Software is intertwined with all aspects of our lives (e.g. web services). Challenge:  maintain information security
+ 
+Software engineering diversity
+
+A systematic approach is taking into account
+Cost, schedule, and dependability issues 
+
+Implementations vary depending on
+The organization developing the software
+The typeof software
+The people involved in the process
+
+“There is no universal method or technique. The type of application may decide over the used method.”
+
+Types of application
+
+Stand alone applications
+Run on a  local computer
+Include all necessary functionality
+Do not require network access E.g. CAD programs, photo manipulation
+Interactive 
+
+Transactionbased applications
+Execute on a remote computer  but accessed from a user’s PC or terminal
+May include  large data  that is accessed and updated at each transaction Ecommerce systems Cloud based business systems
+ 
+Types of application
+
+Embedded control systems
+Software that  controls hardware  devices
+Probably the  majorityof systems
+E.g.  Mobile phone  software, software in a microwave, software in cars
+
+Batch processing systems
+Systems that process large batches of data
+Input Output systems E.g. phone billing systems, salary payment systems
+
+Types of application
+
+Entertainment systems
+Focus on personal use
+Usually games of some sort
+Quality of user interaction  is key
+
+Systems for modelling simulation
+Developed by scientists and engineers
+Used to model situations
+Often computationally intensive
+Require high performance parallel systems
+ 
+
+Types of application
+
+Data collection systems
+
+Collect data  from the environment using a set of  sensors
+Often installed in  hostile environments  e.g. inside an engine or in a remote location
+
+Systems of systems
+Composed of a number of software systems
+Some may be generic (e.g. a spreadsheet program) others may be  specifically written for that environment
+
+No clear boundaries
+
+The boundaries between systems are blurred
+
+A game for a mobile phone has  the same constraints as phone software
+Batch processing systems are often used in conjunction with web based systems (e.g. phone bill)
+
+Software engineering techniques may be different
+An embedded control system in a car can be safety critical i.e. it needs extensive verification as it is expensive to recall cars after sale
+Webbased systems often use an  iterative development approach
+Systems of systems usually need to be  specified in advanceso they can be developed separately
+ 
+Software engineering fundamentals
+
+But some fundamentals apply to all types of software
+Use a managed and understood development process i.e. have a clear idea of what will be produced and when it will be produced
+Software should be dependable and perform efficiently. It should be safe to operate and secured against external attacks.
+Software expectations should be understood and managed using software requirements and specification documents
+Make effective use of existing resources i.e. reuse already developed components
+
+Software engineering and the web
+
+The web had a profound effect on software engineering
+Initially universally accessible information store
+Around  2000 the Web started to evolve
+More and more functionality was added to the browser
+Webbased systems started replacing special purpose interfaces
+Led to the development of new and innovative services
+Web browsers improved to run small programs
+Instead of writing software and deploying it on PCs it was 
+deployed on web servers
+
+Changes and upgrades of software became cheaper
+Costs were also saved on the  user interface development
+ 
+
+Software engineering and the web
+
+The next step: web services and software as a service
+Web services deliver specific functionality over the web
+Applications  integrate these web services(e.g. google translate)
+Linking can be dynamic so that it is executed when it is called (allows for updating the service)
+Software as a service (SaaS)  brings entire programs into the “cloud” (e.g. web based email)
+A computing cloud is a huge number of  linked computers that are shared by many users
+Users pay according to how much they use the software (often it is free but financed through advertising)
+
+Software engineering and the web
+Changes in system engineering
+
+Software reuse  s become the  dominant approach
+
+Systems e not specified in advance but rather developed iteratively
+
+User interfaces are constrained  the capabilities of the web browser
+
+Web based application interfaces are still relimited than specially designed interfaces on PCs
+
+Progress is,owever, made (e.g.  AJAX)
+ 
+Software ethics
+
+Don’t be evil!
+
+Software engineering is carried out within a social and legal framework
+he job involves  sponsibilities beyond technical skills
+
+This includes the  plication of standards  and morality
+
+Software engineers do have  lot of power …
+
+Software ethics
+
+Standards that may not be bound by law
+
+
+Confidentiality: expect the confidentiality of employees and clients, also if no confid entiality agreement is signed
+
+Competence: do not accept work that is outside your competence
+
+Intellectual properties:be aware of  intellectual property such as patents and copyrights
+
+Computer misuse: do not use technical skills to  misuse other people’s computer  (e.g. game playing, dissemination of viruses, etc.)
+ 
+
+What you should have taken away from this class:
+
+Software is not just a program or programs but also includes documentation. 
+The software process includes all of the activities involved in software development. 
+The high level activities of specification, design and implementation, validation, and evolution are part of all software processes.
+There are many different types of systems  and each requires appropriate software engineering tools and techni ques for their development.
+The fundamental ideas of software engineering are applicable to all types of software systems. 
+These fundamentals include managed software processes, software dependability and security, requirements engineering, and software reuse. 
+Software engineers have responsibilities  to the engineering profession and society. 
+They should not simply be concerned with technical issues.
+Professional societies publish codes of conduct that set out the standards of behavior expected of their members.
