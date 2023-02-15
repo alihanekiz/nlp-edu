@@ -273,7 +273,7 @@ User interfaces are constrained  the capabilities of the web browser
 
 Web based application interfaces are still relimited than specially designed interfaces on PCs
 
-Progress is,owever, made (e.g.  AJAX)
+Progress is however made (e.g.  AJAX)
  
 Software ethics
 
