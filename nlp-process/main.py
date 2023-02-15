@@ -15,6 +15,8 @@ while True:
     l = l.strip()
 
     if l != '':
+        if l[len(l)-1] not in ['.', '!', '?']:
+            l = l + '.'
         s.append(l)
 
 
