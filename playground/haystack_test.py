@@ -9,7 +9,7 @@ from haystack.pipelines import (
     QuestionAnswerGenerationPipeline,
 )
 
-f = open('../clean-data/lecture-data/content_w01.txt','r')
+f = open('../clean-data/processed/w01-simple.txt','r')
 
 text1 = f.read()
 f.close()
