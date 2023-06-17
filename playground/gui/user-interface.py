@@ -1,3 +1,5 @@
+import os
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 from PyQt5.QtWidgets import QApplication, QVBoxLayout, QPushButton, QFileDialog, QWidget, QListWidget, QProgressBar, QTextEdit
 from pdfminer.high_level import extract_text
 import nltk
@@ -5,6 +7,15 @@ import spacy
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from dateutil.parser import parse
+from elasticsearch import Elasticsearch
+from haystack.utils import launch_es, print_questions
+from haystack.nodes import QuestionGenerator, BM25Retriever, FARMReader
+from haystack.document_stores import ElasticsearchDocumentStore
+from haystack.pipelines import (
+    QuestionGenerationPipeline,
+    RetrieverQuestionGenerationPipeline,
+    QuestionAnswerGenerationPipeline,
+)
 
 class FileSelectWindow(QWidget):
     def __init__(self):
@@ -92,8 +103,66 @@ class TextEditWindow(QWidget):
 
 
     def next_step(self): 
+        res = []
         for (index, edit) in enumerate(self.text_edits):
-            print(edit.toPlainText())
+            res.append(edit.toPlainText())
+        self.close()
+        self.new_window = QuestionsWindow(res)
+        self.new_window.show()
+
+
+class QuestionsWindow(QWidget):
+    def __init__(self, docs):
+        super(QuestionsWindow, self).__init__()
+
+        layout = QVBoxLayout()
+        self.text_edits = []
+        
+        self.delete_all_documents()
+        questions = generate_questions(docs)   
+        print(questions)  
+        text_edit = QTextEdit(self)
+        text_edit.setPlainText("questions")
+        layout.addWidget(text_edit)
+        self.text_edits.append(text_edit)
+
+        self.setLayout(layout)
+
+
+    def delete_all_documents(self): 
+        es = Elasticsearch(persistent=False)
+        index_name = "document"
+
+        query = {
+            "query": {
+                "match_all": {}
+            }
+        }
+        es.delete_by_query(index=index_name, body=query)
+
+
+
+def generate_questions(texts):
+
+        docs = [{"content": text} for text in texts]
+        
+        document_store = ElasticsearchDocumentStore()
+        document_store.write_documents(docs)
+
+        # # # Initialize Question Generator
+        question_generator = QuestionGenerator()
+        question_generation_pipeline = QuestionGenerationPipeline(question_generator)
+
+        results = []
+        for idx, document in enumerate(document_store):
+
+            print(f"\n * Generating questions for document {idx}: {document.content[:100]}...\n")
+            result = question_generation_pipeline.run(documents=[document])
+            for doc in result['documents']:
+                for question in doc['generated_questions']:
+                    results.append(question['question'])
+
+        return results
 
 
 def is_date(string, fuzzy=False):
