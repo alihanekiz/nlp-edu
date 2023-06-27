@@ -12,6 +12,8 @@ For development and research purposes, you can disable security in the elasticse
 Furthermore you also have to install the haystack library question generation pipeline.
 You can find a proper installation guide [here](https://docs.haystack.deepset.ai/docs/installation). Make sure to check for compatibility beforehand.
 
+If you installed Python via the data science platform Anaconda, make sure to freshly install the latest version of Python via the official [website](https://www.python.org/downloads/). This is recommended, as the haystack lib is not compatible with the Python package provided by Anaconda.
+
 ## Structure
 
 TODO: add project structure description.
@@ -41,3 +43,7 @@ Generated questions:
 - The software process includes all of the activities involved in what?
 - Software ethics Don't be evil!
 - What are the fundamental ideas of software engineering applicable to?
+
+## GUI
+
+There's also a gui application available for generating questions. This gives you the option to manually edit the extracted informations. Furthermore, you can also export the questions in the QTI-Standard xml format. This makes it easier to integrate the generated questions to an existing quiz system. Before exporting, there's the possibility to edit the created questions, as sometimes the pipeline generates invalid/false questions.
