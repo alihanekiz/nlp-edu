@@ -234,7 +234,7 @@ for q in questions:
     flow = etree.SubElement(presentation, 'flow', attrib={"class": "Block"})
     material = etree.SubElement(flow, 'material')
     mattext = etree.SubElement(material, 'mattext', attrib={"charset": "ascii-us", "texttype": "text/plain", "{http://www.w3.org/XML/1998/namespace}space": "default"})
-    mattext.text = "<![CDATA[" + q + "]]>"
+    mattext.text = q
 
     resprocessing = etree.SubElement(item, 'resprocessing')
     outcomes = etree.SubElement(resprocessing, 'outcomes')
