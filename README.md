@@ -16,7 +16,14 @@ If you installed Python via the data science platform Anaconda, make sure to fre
 
 ## Structure
 
-TODO: add project structure description.
+/dirty-data: Contains all the raw lecture notes in pdf format.
+/clean-data: Contains extracted lecture notes in plain text.
+/xml-generation: Contains a basic qti 1.2 standard xml export script
+/data-extraction: Contains a basic text extraction script. PDF -> Text
+/data-extraction-deep: Contains different methods to extract and clean the text. PDF -> Text
+/nlp-process: Contains a basic word clustering script with spacy.
+/playground: This folder contains the experiment with the haystack framework. 
+/playground/gui: Contains the gui app for the experiment. PDF -> Text -> XML (QTI)
 
 ## Format
 
