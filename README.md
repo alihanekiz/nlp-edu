@@ -1,6 +1,6 @@
 # NLP-EDU
 
-This repository contains my bachelor thesis project.
+This repository contains the experiment for my bachelor thesis.
 
 ## Setup
 
