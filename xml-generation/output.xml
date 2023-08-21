@@ -588,7 +588,7 @@
         <presentation label="Model Short Answer">
           <flow class="Block">
             <material>
-              <mattext charset="ascii-us" texttype="text/plain" xml:space="default">Frage 1 odo?</mattext>
+              <mattext charset="ascii-us" texttype="text/plain" xml:space="default">Frage 1</mattext>
             </material>
           </flow>
         </presentation>
@@ -655,7 +655,7 @@
         <presentation label="Model Short Answer">
           <flow class="Block">
             <material>
-              <mattext charset="ascii-us" texttype="text/plain" xml:space="default">Frage 2 odo2</mattext>
+              <mattext charset="ascii-us" texttype="text/plain" xml:space="default">Frage 2</mattext>
             </material>
           </flow>
         </presentation>

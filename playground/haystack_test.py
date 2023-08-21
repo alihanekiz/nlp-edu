@@ -1,3 +1,5 @@
+# This code can also be found on the official haystack website: https://haystack.deepset.ai/tutorials/13_question_generation
+
 import os
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 from haystack.utils import launch_es, print_questions
